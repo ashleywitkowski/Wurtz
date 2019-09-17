@@ -1,6 +1,6 @@
 import "./Home.css";
 import React from "react";
-import background from "../../resources/Video/Website-Background.mp4";
+import background from "../../resources/Video/Website-Background2.mp4";
 
 const Home = props => {
   return (
