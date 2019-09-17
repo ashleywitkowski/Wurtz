@@ -1,0 +1,11 @@
+.navigation > * > a {
+  font-size: 25px;
+  color: white !important;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
+}
+
+.navigation {
+  margin: 0 auto;
+  padding-top: 20px;
+}
