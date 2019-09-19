@@ -1,11 +1,15 @@
 .socials {
-  color: white;
   text-align: center;
   margin-top: 20%;
 }
 
 .socials > * {
   margin: 0% 8% 0% 8%;
+  color: white;
+}
+
+.socials > *:hover {
+  color: rgb(151, 197, 170);
 }
 
 #video-bg {
@@ -36,11 +40,3 @@
   background: grey;
   opacity: 0.45;
 }
-/* .video-bg {
-  min-height: 100%;
-  min-width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  z-index: -999;
-} */
