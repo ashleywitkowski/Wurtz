@@ -4,10 +4,12 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Reel from "./components/Reel/reel";
 import NavBar from "./components/NavBar/NavBar";
-import test from "./components/About/About";
+import About from "./components/About/About";
 import Photos from "./components/Photos/Photos";
+import Music from "./components/Music/music";
 
-const App = () => {
+const App = props => {
+  console.log("props: ", props);
   return (
     <Router>
       <React.Fragment>
@@ -25,9 +27,10 @@ const App = () => {
         <div className="row" style={{ margin: 0 }}>
           <div className="col-lg-12">
             <Route exact path="/" component={Home} />
-            <Route path="/about" component={test} />
+            <Route path="/about" component={About} />
             <Route path="/reel" component={Reel} />
             <Route path="/photos" component={Photos} />
+            <Route path="/music" component={Music} />
           </div>
         </div>
       </React.Fragment>

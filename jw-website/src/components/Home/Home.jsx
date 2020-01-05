@@ -12,20 +12,26 @@ const Home = props => {
         </video>
       </div>
       <div className="socials">
-        <a href="https://www.instagram.com/justinwurtz/?hl=en" target="_blank">
-          <i class="fab fa-instagram fa-5x fa-fw"></i>
+        <a
+          href="https://www.instagram.com/justinwurtz/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-instagram fa-5x fa-fw"></i>
         </a>
         <a
           href="https://www.youtube.com/channel/UCEs67m3EYo7Pw_16IokFrtg"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <i class="fab fa-youtube fa-5x fa-fw"></i>
+          <i className="fab fa-youtube fa-5x fa-fw"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/justin-wurtz-272b45126/"
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <i class="fab fa-linkedin fa-5x fa-fw"></i>
+          <i className="fab fa-linkedin fa-5x fa-fw"></i>
         </a>
         {/* <i class="fab fa-twitter fa-2x"></i> */}
         {/* <i class="fab fa-facebook fa-2x"></i>

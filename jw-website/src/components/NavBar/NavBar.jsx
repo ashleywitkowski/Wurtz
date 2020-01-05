@@ -1,38 +1,59 @@
 import "./NavBar.css";
 import { Navbar, Nav } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import React from "react";
 
 const NavBar = props => {
+  console.log("props: ", props);
+  let path = "";
+
+  function getClassName(path) {
+    if (path === "/music") {
+      return "music-nav";
+    } else {
+      return "";
+    }
+  }
+  getClassName("/music");
   return (
-    <Navbar className="navbar">
+    <Navbar className="navBar">
       <Nav
-        className="col-lg-12 navigation"
+        className={`navigation ${getClassName(path)}`}
         style={{ textAlign: "center", fontSize: 25 }}
       >
         <div className="col-lg-2.5">
           <NavLink exact to="/" className="nav-link">
-            <i className="fa fa-home"></i> Home
+            <div className="menu-item">
+              <i className="fa fa-home"></i> Home
+            </div>
           </NavLink>
         </div>
         <div className="col-lg-2.5">
           <NavLink to="/about" className="nav-link">
-            <i className="fa fa-address-card"></i> About
+            <div className="menu-item">
+              <i className="fa fa-address-card"></i> About
+            </div>
           </NavLink>
         </div>
         <div className="col-lg-2.5">
           <NavLink to="/reel" className="nav-link">
-            <i className="fa fa-video"></i> Reel
+            <div className="menu-item">
+              <i className="fa fa-video"></i> Reel
+            </div>
           </NavLink>
         </div>
         <div className="col-lg-2.5">
           <NavLink to="/music" className="nav-link">
-            <i className="fa fa-music"></i> Music
+            <div className="menu-item">
+              <i className="fa fa-music"></i> Music
+            </div>
           </NavLink>
         </div>
         <div className="col-lg-2.5">
           <NavLink to="/photos" className="nav-link">
-            <i className="fa fa-camera-retro"></i> Photos
+            <div className="menu-item">
+              <i className="fa fa-camera-retro"></i> Photos
+            </div>
           </NavLink>
         </div>
       </Nav>
@@ -40,4 +61,4 @@ const NavBar = props => {
   );
 };
 
-export default NavBar;
+export default withRouter(NavBar);

@@ -1,0 +1,75 @@
+@import url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
+@import url("https://media.giphy.com/media/26FL52lQolZU3Ob1S/giphy.gif");
+.jwIcon {
+  font-family: "Broadway";
+  text-align: center;
+  color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  letter-spacing: 1px;
+}
+
+#jwHeader {
+  background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 100px;
+  padding: 50px 15px 0 15px;
+  line-height: 1.05;
+  margin: 10px 0;
+}
+
+.innerBox {
+  /* background-color: white; */
+  border-image-source: url("https://media.giphy.com/media/26FL52lQolZU3Ob1S/giphy.gif"),
+    10 10 10 10, repeat;
+  /* opacity: 0.5; */
+  width: 850px;
+  height: 800px;
+}
+
+p {
+  font-family: "BroadwayFlat";
+  color: white;
+  font-size: 17px;
+}
+
+#audio {
+  font-family: "Broadway";
+  background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
+  background-size: cover;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  align-items: center;
+  line-height: 1.05;
+  font-size: 70px;
+}
+
+#video {
+  font-family: "Broadway";
+  background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
+  background-size: cover;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  line-height: 1.05;
+  font-size: 70px;
+}
+.rotate {
+  -moz-transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+.rotate.down {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

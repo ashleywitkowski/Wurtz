@@ -8,6 +8,17 @@ body {
   background: black !important;
 }
 
+@font-face {
+  font-family: "Broadway";
+  src: local("Broadway"),
+    url("./resources/jwLogo/BroadwayFlat3DFilled-Italic.ttf") format("");
+}
+@font-face {
+  font-family: "BroadwayFlat";
+  src: local("BroadwayFlat"),
+    url("./resources/jwLogo/BroadwayFlat-Italic.ttf") format("");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

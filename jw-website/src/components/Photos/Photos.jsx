@@ -29,10 +29,26 @@ const Photos = props => {
   };
 
   return (
-    <Carousel interval={7000} className="carousel-inner">
-      {renderImgs(images)}
-    </Carousel>
+    <React.Fragment>
+      window.scroll(0, 100);
+      <Carousel interval={7000} className="carousel-inner">
+        {renderImgs(images)}
+      </Carousel>
+      {/* <div className="container mt-4">
+        <div className="row">
+          <div className="col-md-4">
+            <a
+              href="#"
+              data-target="#modalIMG"
+              data-toggle="modal"
+              className="color-gray-darker c6 td-hover-none"
+            >
+              <img className="img-top" src={require(images[img])} />
+            </a>
+          </div>
+        </div>
+      </div> */}
+    </React.Fragment>
   );
 };
-
 export default Photos;
