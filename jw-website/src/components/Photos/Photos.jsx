@@ -30,7 +30,6 @@ const Photos = props => {
 
   return (
     <React.Fragment>
-      window.scroll(0, 100);
       <Carousel interval={7000} className="carousel-inner">
         {renderImgs(images)}
       </Carousel>

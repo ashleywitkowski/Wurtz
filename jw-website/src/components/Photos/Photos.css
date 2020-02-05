@@ -3,7 +3,7 @@
   /* display: inline; */
   /* float: center; */
   margin: 5px 5px 5px 5px;
-  padding: 20px 30px 25px 25px;
+  padding: 20px 25px 25px 22px;
   text-align: center;
   text-decoration: none;
   -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
@@ -16,8 +16,8 @@
   position: relative;
 }
 .d-block {
-  height: 640px;
-  width: 600px;
+  height: 670px;
+  width: 605px;
 }
 
 .carousel-indicators .active {

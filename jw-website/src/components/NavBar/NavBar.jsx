@@ -4,9 +4,6 @@ import { NavLink, withRouter } from "react-router-dom";
 import React from "react";
 
 const NavBar = props => {
-  console.log("props: ", props);
-  let path = "";
-
   function getClassName(path) {
     if (path === "/music") {
       return "music-nav";
@@ -14,11 +11,11 @@ const NavBar = props => {
       return "";
     }
   }
-  getClassName("/music");
+
   return (
     <Navbar className="navBar">
       <Nav
-        className={`navigation ${getClassName(path)}`}
+        className={`navigation ${getClassName(props.location.pathname)}`}
         style={{ textAlign: "center", fontSize: 25 }}
       >
         <div className="col-lg-2.5">

@@ -1,5 +1,6 @@
 @import url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
 @import url("https://media.giphy.com/media/26FL52lQolZU3Ob1S/giphy.gif");
+
 .jwIcon {
   font-family: "Broadway";
   text-align: center;
@@ -8,10 +9,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  margin-left: 40px;
+  margin-top: 20px;
   letter-spacing: 1px;
 }
 
+#jwImg {
+  margin-left: 90px;
+}
+
+#pgraph {
+  margin: 30px 20px 0 85px;
+  flex-direction: column;
+  width: 465px;
+}
 #jwHeader {
   background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
   background-size: cover;
@@ -19,24 +30,27 @@
   -webkit-background-clip: text;
   text-transform: uppercase;
   font-size: 100px;
-  padding: 50px 15px 0 15px;
+  padding: 0px 20px 10px 15px;
   line-height: 1.05;
   margin: 10px 0;
+  vertical-align: top;
+  float: top;
+  justify-content: baseline;
 }
-
-.innerBox {
+/* 
+.col-lg-7 {
   /* background-color: white; */
-  border-image-source: url("https://media.giphy.com/media/26FL52lQolZU3Ob1S/giphy.gif"),
-    10 10 10 10, repeat;
-  /* opacity: 0.5; */
-  width: 850px;
-  height: 800px;
-}
+/* border-image-source: url("https://media.giphy.com/media/26FL52lQolZU3Ob1S/giphy.gif"),
+    10 10 10 10, repeat; */
+/* opacity: 0.5; */
+/* width: 850px;
+  height: 1500px; */
+/* } */
 
 p {
   font-family: "BroadwayFlat";
   color: white;
-  font-size: 17px;
+  font-size: 18px;
 }
 
 #audio {
@@ -48,10 +62,28 @@ p {
   -webkit-background-clip: text;
   text-transform: uppercase;
   align-items: center;
+  width: 170px;
   line-height: 1.05;
-  font-size: 70px;
+  font-size: 80px;
+  margin-top: 40px;
 }
-
+#audioP {
+  font-size: 19px;
+}
+#audioGear {
+  font-family: "Broadway";
+  background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
+  background-size: cover;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  align-items: center;
+  line-height: 1.05;
+  font-size: 50px;
+  /* margin: 0 15px 10px 15px; */
+  width: 90px;
+}
 #video {
   font-family: "Broadway";
   background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
@@ -61,15 +93,58 @@ p {
   -webkit-background-clip: text;
   text-transform: uppercase;
   line-height: 1.05;
-  font-size: 70px;
+  font-size: 80px;
+  width: 170px;
+  margin-top: 40px;
+}
+#videoP {
+  font-size: 19px;
+}
+
+#videoGear {
+  font-family: "Broadway";
+  background-image: url("https://media.giphy.com/media/xT9IgjHkJczyL3Ujle/giphy.gif");
+  background-size: cover;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  align-items: center;
+  line-height: 1.05;
+  font-size: 50px;
+  margin: 0 15px 20px 15px;
+  width: 90px;
+}
+
+#camList {
+  margin: 20px 0 0 0;
+}
+
+#lensesList {
+  margin: 20px 0 0 75px;
 }
 .rotate {
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
 }
-.rotate.down {
+.rotate-down {
   -moz-transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
+}
+.rotate-up {
+  transform: none;
+}
+
+.vidGear {
+  column-count: 2;
+}
+
+/* .audGear {
+  column-count: 3;
+} */
+
+.fa-chevron-right {
+  margin-top: 10px;
 }
