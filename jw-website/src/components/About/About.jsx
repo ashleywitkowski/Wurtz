@@ -1,7 +1,7 @@
 import "./About.css";
-import React, { Component, useState } from "react";
-import { Collapse } from "react-bootstrap/Collapse";
-import { Button } from "react-bootstrap";
+import React, { Component } from "react";
+//import { Collapse } from "react-bootstrap/Collapse";
+//import { Button } from "react-bootstrap";
 
 class About extends Component {
   constructor(props) {
@@ -30,7 +30,6 @@ class About extends Component {
           className="col-lg-5"
           style={{
             marginRight: "35px"
-            // verticalAlign: "top"
           }}
         >
           <div className="row">
@@ -212,7 +211,6 @@ class About extends Component {
                       fontSize: "20px"
                     }}
                   >
-                    <br></br>
                     Camera
                   </u>
                   <ul>
@@ -224,7 +222,7 @@ class About extends Component {
                     <li>DJI Mavic Air</li>
                   </ul>
                 </div>
-                <br></br>
+
                 <div id="lensesList">
                   <u
                     style={{
