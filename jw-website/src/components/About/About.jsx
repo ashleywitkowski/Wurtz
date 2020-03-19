@@ -1,7 +1,5 @@
 import "./About.css";
 import React, { Component } from "react";
-//import { Collapse } from "react-bootstrap/Collapse";
-//import { Button } from "react-bootstrap";
 
 class About extends Component {
   constructor(props) {
@@ -23,7 +21,6 @@ class About extends Component {
   };
 
   render() {
-    console.log(this.state.audioGear);
     return (
       <div className="row">
         <div
@@ -43,6 +40,7 @@ class About extends Component {
               src={require("../../resources/Pictures/jwPhoto.jpg")}
               width="70%"
               height="60%"
+              alt="Justin"
             ></img>
           </div>
           <div className="row">
@@ -155,9 +153,7 @@ class About extends Component {
               </div>
             </div>
           </div>
-          {/* </div> */}
-          {/* </div> */}
-          {/* </div> */}
+
           <div className="row">
             <h1 id="video">Video</h1>
           </div>
@@ -172,75 +168,70 @@ class About extends Component {
               televised broadcast events (ESPN3, FOX Sports 1, NESN, etc)
             </p>
           </div>
+
+          <div className="row">
+            <h1 id="videoGear">Gear</h1>
+            <span
+              onClick={this.updateVideoGear}
+              style={{
+                color: "white",
+                transform: `rotate(${
+                  this.state.videoGear === "block" ? "90" : "0"
+                }deg)`,
+                marginBottom: "40px",
+                marginTop: "5px",
+                height: "30px"
+              }}
+            >
+              <i className={`fa fa-chevron-right`} />
+            </span>
+          </div>
+          {/* <div className="row"> */}
           <div
-            className="row"
+            className="vidGear"
             style={{
-              color: "white"
+              display: this.state.videoGear,
+              fontFamily: "BroadwayFlat",
+              color: "white",
+              fontSize: "16px"
             }}
           >
-            {/* <div> */}
             <div className="row">
-              <h1 id="videoGear">Gear</h1>
-              <span
-                onClick={this.updateVideoGear}
-                style={{
-                  transform: `rotate(${
-                    this.state.videoGear === "block" ? "90" : "0"
-                  }deg)`,
-                  marginBottom: "40px",
-                  height: "30px"
-                }}
-              >
-                <i className={`fa fa-chevron-right`} />
-              </span>
-            </div>
-            {/* </div> */}
-            <div className="row">
-              <div
-                className="vidGear"
-                style={{
-                  display: this.state.videoGear,
-                  fontFamily: "BroadwayFlat",
-                  color: "white",
-                  fontSize: "16px"
-                }}
-              >
-                <div id="camList">
-                  <u
-                    style={{
-                      fontSize: "20px"
-                    }}
-                  >
-                    Camera
-                  </u>
-                  <ul>
-                    <li>Lumix G85</li>
-                    <li>Canon EOS 70D</li>
-                    <li>Yelangu Gimbal</li>
-                    <li>Rode VideoMic GO Light</li>
-                    <li>Tripod x2</li>
-                    <li>DJI Mavic Air</li>
-                  </ul>
-                </div>
+              <div className="col-lg-8">
+                <u
+                  style={{
+                    fontSize: "20px",
+                    paddingLeft: "12px"
+                  }}
+                >
+                  Camera
+                </u>
+                <ul style={{ paddingLeft: "12px" }}>
+                  <li>Lumix G85</li>
+                  <li>Canon EOS 70D</li>
+                  <li>Yelangu Gimbal</li>
+                  <li>Rode VideoMic GO Light</li>
+                  <li>Tripod x2</li>
+                  <li>DJI Mavic Air</li>
+                </ul>
+              </div>
 
-                <div id="lensesList">
-                  <u
-                    style={{
-                      fontSize: "20px",
-                      marginLeft: "25px"
-                    }}
-                  >
-                    Lenses
-                  </u>
-                  <ul>
-                    <li>Canon EFS 55-250mm​</li>
-                    <li>Canon EFS 18-55mm</li>
-                    <li>Canon EF 75-300</li>
-                    <li>Canon Macro Lens EF 50mm</li>
-                    <li>Canon EF 50mm</li>
-                    <li>Canon EF 28-105mm</li>
-                  </ul>
-                </div>
+              <div className="col-lg-8">
+                <u
+                  style={{
+                    fontSize: "20px"
+                  }}
+                >
+                  Lenses
+                </u>
+                <ul style={{ paddingLeft: "12px" }}>
+                  <li>Canon EFS 55-250mm​</li>
+                  <li>Canon EFS 18-55mm</li>
+                  <li>Canon EF 75-300</li>
+                  <li>Canon Macro Lens EF 50mm</li>
+                  <li>Canon EF 50mm</li>
+                  <li>Canon EF 28-105mm</li>
+                </ul>
               </div>
             </div>
           </div>

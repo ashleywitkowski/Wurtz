@@ -1,28 +1,15 @@
 import "./Music.css";
 import React from "react";
-import { withRouter } from "react-router-dom";
 
 class Music extends React.Component {
   render() {
     return (
       <React.Fragment>
         <div className="musicRow">
-          <div
-            className="albumCover"
-
-            // style={{
-            //   display: "inline",
-            //   overflow: "hidden",
-            //   width: "500px",
-            //   // height: "415px",
-            //   borderRadius: "10px",
-            //   boxShadow: " 0 6px #99907e",
-            //   marginLeft: 30,
-            //   marginTop: 70
-            // }}
-          >
+          <div className="albumCover">
             <img
               src={require("../../resources/Pictures/eventides.PNG")}
+              alt="Album cover"
               width="500px"
               height="415px"
               position="absolute"
@@ -45,19 +32,13 @@ class Music extends React.Component {
               zIndex: 1
             }}
           ></div>
-          {/* <img
-              src={require("../../resources/Pictures/jwMusic.jpg")}
-              width="80%"
-              height="90%"
-              style={{ marginLeft: 125, marginTop: 25 }}
-            /> */}
-
           <div id="divider"></div>
           <div id="player">
             <iframe
               src="https://open.spotify.com/embed/album/3IYqFvTyLjAoWycby3rGLw"
               width="510"
               height="415"
+              title="spotify player"
               style={{
                 marginLeft: 80,
                 marginRight: 80,
@@ -69,21 +50,6 @@ class Music extends React.Component {
             ></iframe>
           </div>
         </div>
-        {/* <div id="followButton">
-          <iframe
-            src="https://open.spotify.com/follow/1/?uri=spotify:artist:4fyGp5bRFqFh9DAKYg2fb4&size=detail&theme=light&show-count=0"
-            width="300"
-            height="100"
-            style={{
-              position: "relative",
-              float: "top",
-              marginRight: 220
-            }}
-            scrolling="no"
-            frameBorder="0"
-            allowtransparency="true"
-          ></iframe>
-        </div>{" "} */}
         <div id="musicSocials">
           <a
             href="https://wurtz.bandcamp.com/"

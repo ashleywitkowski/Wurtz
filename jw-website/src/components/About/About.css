@@ -37,15 +37,6 @@
   float: top;
   justify-content: baseline;
 }
-/* 
-.col-lg-7 {
-  /* background-color: white; */
-/* border-image-source: url("https://media.giphy.com/media/26FL52lQolZU3Ob1S/giphy.gif"),
-    10 10 10 10, repeat; */
-/* opacity: 0.5; */
-/* width: 850px;
-  height: 1500px; */
-/* } */
 
 p {
   font-family: "BroadwayFlat";
@@ -81,7 +72,6 @@ p {
   align-items: center;
   line-height: 1.05;
   font-size: 50px;
-  /* margin: 0 15px 10px 15px; */
   width: 90px;
 }
 #video {
@@ -112,17 +102,10 @@ p {
   align-items: center;
   line-height: 1.05;
   font-size: 50px;
-  margin: 0 15px 20px 15px;
+  margin: 0 15px 10px 15px;
   width: 90px;
 }
 
-#camList {
-  margin: 20px 0 0 0;
-}
-
-#lensesList {
-  margin: 20px 0 0 75px;
-}
 .rotate {
   -moz-transition: all 0.5s linear;
   -webkit-transition: all 0.5s linear;
@@ -140,10 +123,6 @@ p {
 .vidGear {
   column-count: 2;
 }
-
-/* .audGear {
-  column-count: 3;
-} */
 
 .fa-chevron-right {
   margin-top: 10px;

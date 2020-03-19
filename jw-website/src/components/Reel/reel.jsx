@@ -36,9 +36,11 @@ class Reel extends Component {
       vidThumbnails.push(
         <img
           src={`https://i.ytimg.com/vi/${vidIds[i]}/hqdefault.jpg`}
+          alt="video thumbnails"
           onClick={() => this.handleClick(i)}
           key={i}
           className={`col-${colSize}`}
+          style={{ cursor: "pointer" }}
         />
       );
     }
@@ -46,11 +48,7 @@ class Reel extends Component {
   };
 
   handleClick = index => {
-    console.log(index);
     this.setState({ activeIndex: index });
-
-    //console.log(this.state.videoIds);
-    //console.log(this.state.activeIndex);
   };
 
   renderActiveVid = (vidIds, activeIndex) => {
@@ -58,6 +56,7 @@ class Reel extends Component {
       <iframe
         width="900"
         height="500"
+        title="active"
         src={`https://www.youtube.com/embed/${vidIds[activeIndex]}`}
         allowFullScreen
       ></iframe>
@@ -68,20 +67,21 @@ class Reel extends Component {
     return ((index % length) + length) % length;
   }
   render() {
-    console.log(this.state.activeIndex);
     return this.state.videoIds.length === 0 ? (
       <React.Fragment />
     ) : (
       <div className="row">
-        <div className="col-lg-1"></div>
+        <div className="col-lg-2"></div>
         <div className="col-lg-10">
-          <div className="row">
-            <div className="col-lg-12" style={{ textAlign: "center" }}>
-              {this.renderActiveVid(
-                this.state.videoIds,
-                this.state.activeIndex
-              )}
+          <div className="gridRow">
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
               <span
+                style={{ justifyContent: "flex-start", color: "white" }}
                 onClick={() =>
                   this.handleClick(
                     this.mod(
@@ -93,7 +93,22 @@ class Reel extends Component {
               >
                 <i className={`fa fa-chevron-left`} />
               </span>
+            </div>
+            <div className="col-lg-12" style={{ textAlign: "center" }}>
+              {this.renderActiveVid(
+                this.state.videoIds,
+                this.state.activeIndex
+              )}
+            </div>
+            <div
+              className="chevronRight"
+              style={{
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
               <span
+                style={{ justifyContent: "flex-start", color: "white" }}
                 onClick={() =>
                   this.handleClick(
                     (this.state.activeIndex + 1) % this.state.videoIds.length
@@ -104,32 +119,17 @@ class Reel extends Component {
               </span>
             </div>
           </div>
-          <div className="row" style={{ justifyContent: "center" }}>
+          <div
+            className="row"
+            style={{
+              justifyContent: "left"
+            }}
+          >
             {this.renderVidThumbnail(this.state.videoIds)}
           </div>
         </div>
       </div>
     );
-
-    // <div
-    //   className="film"
-    //   style={{
-    //     backgroundImage: `url(require("../../resources/Pictures/film.jpg"))`,
-    //     width: "50%",
-    //     height: "70%"
-    //   }}
-    // >
-    // <div className="reel-vid">
-    //   <iframe
-    //     width="855"
-    //     height="369"
-    //     src="https://www.youtube.com/embed/TC7csvH-Qsw?autoplay=1"
-    //     frameBorder="0"
-    //     // allow="autoplay"
-    //     allowFullScreen
-    //   ></iframe>
-    // </div>
-    // </div>
   }
 }
 

@@ -1,9 +1,8 @@
 .carousel-inner {
   background: white;
-  /* display: inline; */
-  /* float: center; */
   margin: 5px 5px 5px 5px;
   padding: 20px 25px 25px 22px;
+  width: 100% !important;
   text-align: center;
   text-decoration: none;
   -webkit-box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
@@ -16,19 +15,25 @@
   position: relative;
 }
 .d-block {
-  height: 670px;
-  width: 605px;
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
 .carousel-indicators .active {
   background-color: white;
 }
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(100%);
+.grid {
+  display: grid;
+  grid-template-columns: [one] 240px [two] 40px [three] 880px [four] 40px [five] 30px [end];
 }
-/* .carousel-inner img {
-  display: block;
-  width: inherit;
-} */
+
+.chevronRight {
+  grid-column-start: five;
+  grid-column-end: end;
+}
+.chevronLeft {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}

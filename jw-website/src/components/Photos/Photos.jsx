@@ -1,53 +1,116 @@
 import "./Photos.css";
 import React from "react";
 import { Carousel } from "react-bootstrap";
+import { Component } from "react";
 
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
+class Photos extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: 0,
+      images: this.importAll(
+        require.context("../../resources/Gallery", false, /\.(png|jpe?g|svg)$/)
+      )
+    };
+  }
 
-const images = importAll(
-  require.context("../../resources/Gallery", false, /\.(png|jpe?g|svg)$/)
-);
+  importAll = r => {
+    let images = {};
+    r.keys().forEach(item => {
+      images[item.replace("./", "")] = r(item);
+    });
+    return images;
+  };
 
-const Photos = props => {
-  const renderImgs = images => {
+  renderImgs = () => {
     let rv = [];
-    Object.keys(images).forEach((img, i) => {
-      console.log(images);
+    Object.keys(this.state.images).forEach((img, i) => {
       rv.push(
-        <Carousel.Item>
-          <img className="d-block w-100" src={images[img]} alt="First slide" />
+        <Carousel.Item key={i}>
+          <a
+            href={`${this.state.images[img]}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="d-block"
+              src={this.state.images[img]}
+              alt="First slide"
+            />
+          </a>
         </Carousel.Item>
       );
     });
     return rv;
   };
+  mod(index, length) {
+    return ((index % length) + length) % length;
+  }
 
-  return (
-    <React.Fragment>
-      <Carousel interval={7000} className="carousel-inner">
-        {renderImgs(images)}
-      </Carousel>
-      {/* <div className="container mt-4">
-        <div className="row">
-          <div className="col-md-4">
-            <a
-              href="#"
-              data-target="#modalIMG"
-              data-toggle="modal"
-              className="color-gray-darker c6 td-hover-none"
+  handleClick = index => {
+    this.setState({ activeIndex: index });
+  };
+  render() {
+    return (
+      <React.Fragment>
+        <div className="col-lg-9">
+          <div className="grid">
+            <div
+              className="chevronLeft"
+              style={{
+                display: "flex",
+                alignItems: "center"
+              }}
             >
-              <img className="img-top" src={require(images[img])} />
-            </a>
+              <span
+                style={{ justifyContent: "flex-start", color: "white" }}
+                onClick={() =>
+                  this.handleClick(
+                    this.mod(
+                      this.state.activeIndex - 1,
+                      Object.keys(this.state.images).length
+                    )
+                  )
+                }
+              >
+                <i className={`fa fa-chevron-left`} />
+              </span>
+            </div>
+            <Carousel
+              activeIndex={this.state.activeIndex}
+              controls={false}
+              interval={7000}
+              onSelect={e => this.setState({ activeIndex: e })}
+              className="carousel-inner"
+            >
+              {this.renderImgs(this.images)}
+            </Carousel>
+            <div
+              className="chevronRight"
+              style={{
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
+              <span
+                style={{ justifyContent: "flex-start", color: "white" }}
+                onClick={() =>
+                  this.handleClick(
+                    this.mod(
+                      this.state.activeIndex + 1,
+                      Object.keys(this.state.images).length
+                    )
+                  )
+                }
+              >
+                <i className={`fa fa-chevron-right`} />
+              </span>
+            </div>
           </div>
         </div>
-      </div> */}
-    </React.Fragment>
-  );
-};
+      </React.Fragment>
+    );
+  }
+}
+
 export default Photos;

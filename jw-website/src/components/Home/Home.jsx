@@ -33,11 +33,6 @@ const Home = props => {
         >
           <i className="fab fa-linkedin fa-5x fa-fw"></i>
         </a>
-        {/* <i class="fab fa-twitter fa-2x"></i> */}
-        {/* <i class="fab fa-facebook fa-2x"></i>
-      <i class="fab fa-bandcamp fa-2x"></i>
-      <i class="fab fa-soundcloud fa-2x"></i> */}
-        {/* <i class="fab fa-spotify fa-5x fa-fw"></i> */}
       </div>
     </React.Fragment>
   );
