@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Wurtz/static/css/main.bb1db2ba.chunk.css",
-    "main.js": "/Wurtz/static/js/main.3a307e21.chunk.js",
-    "main.js.map": "/Wurtz/static/js/main.3a307e21.chunk.js.map",
+    "main.css": "/Wurtz/static/css/main.71274d24.chunk.css",
+    "main.js": "/Wurtz/static/js/main.84575185.chunk.js",
+    "main.js.map": "/Wurtz/static/js/main.84575185.chunk.js.map",
     "runtime-main.js": "/Wurtz/static/js/runtime-main.6bb62ad8.js",
     "runtime-main.js.map": "/Wurtz/static/js/runtime-main.6bb62ad8.js.map",
     "static/css/2.9b05d464.chunk.css": "/Wurtz/static/css/2.9b05d464.chunk.css",
-    "static/js/2.ca16fb6a.chunk.js": "/Wurtz/static/js/2.ca16fb6a.chunk.js",
-    "static/js/2.ca16fb6a.chunk.js.map": "/Wurtz/static/js/2.ca16fb6a.chunk.js.map",
+    "static/js/2.41954a73.chunk.js": "/Wurtz/static/js/2.41954a73.chunk.js",
+    "static/js/2.41954a73.chunk.js.map": "/Wurtz/static/js/2.41954a73.chunk.js.map",
     "index.html": "/Wurtz/index.html",
-    "precache-manifest.09669047ac1e04d433dee3580be54010.js": "/Wurtz/precache-manifest.09669047ac1e04d433dee3580be54010.js",
+    "precache-manifest.96ed4d1573ad38f50b7c7036e5fb31c5.js": "/Wurtz/precache-manifest.96ed4d1573ad38f50b7c7036e5fb31c5.js",
     "service-worker.js": "/Wurtz/service-worker.js",
     "static/css/2.9b05d464.chunk.css.map": "/Wurtz/static/css/2.9b05d464.chunk.css.map",
-    "static/css/main.bb1db2ba.chunk.css.map": "/Wurtz/static/css/main.bb1db2ba.chunk.css.map",
-    "static/js/2.ca16fb6a.chunk.js.LICENSE.txt": "/Wurtz/static/js/2.ca16fb6a.chunk.js.LICENSE.txt",
+    "static/css/main.71274d24.chunk.css.map": "/Wurtz/static/css/main.71274d24.chunk.css.map",
+    "static/js/2.41954a73.chunk.js.LICENSE.txt": "/Wurtz/static/js/2.41954a73.chunk.js.LICENSE.txt",
     "static/media/BroadwayFlat-Italic.ttf": "/Wurtz/static/media/BroadwayFlat-Italic.0f59a318.ttf",
     "static/media/BroadwayFlat3D-Italic.ttf": "/Wurtz/static/media/BroadwayFlat3D-Italic.93e16416.ttf",
     "static/media/BroadwayFlat3DFilled-Italic.ttf": "/Wurtz/static/media/BroadwayFlat3DFilled-Italic.26c5a627.ttf",
@@ -44,8 +44,8 @@
   "entrypoints": [
     "static/js/runtime-main.6bb62ad8.js",
     "static/css/2.9b05d464.chunk.css",
-    "static/js/2.ca16fb6a.chunk.js",
-    "static/css/main.bb1db2ba.chunk.css",
-    "static/js/main.3a307e21.chunk.js"
+    "static/js/2.41954a73.chunk.js",
+    "static/css/main.71274d24.chunk.css",
+    "static/js/main.84575185.chunk.js"
   ]
 }
