@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b3d39468ef10dc6cf2c7ef106b259b64",
+    "revision": "9e54b82f60405ddd7992225f47a3969a",
     "url": "/Wurtz/index.html"
   },
   {
-    "revision": "647d70e4840450c1ca34",
+    "revision": "c88bcedb4bb53a672c6a",
     "url": "/Wurtz/static/css/2.9b05d464.chunk.css"
   },
   {
-    "revision": "70cc9f5925d3f0664a41",
-    "url": "/Wurtz/static/css/main.714a5875.chunk.css"
+    "revision": "41d0901a585fff7ea51c",
+    "url": "/Wurtz/static/css/main.71274d24.chunk.css"
   },
   {
-    "revision": "647d70e4840450c1ca34",
-    "url": "/Wurtz/static/js/2.d7d50da3.chunk.js"
+    "revision": "c88bcedb4bb53a672c6a",
+    "url": "/Wurtz/static/js/2.41954a73.chunk.js"
   },
   {
     "revision": "52369bce8ed87cd57195cd187ed7e38c",
-    "url": "/Wurtz/static/js/2.d7d50da3.chunk.js.LICENSE.txt"
+    "url": "/Wurtz/static/js/2.41954a73.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "70cc9f5925d3f0664a41",
-    "url": "/Wurtz/static/js/main.28576a2c.chunk.js"
+    "revision": "41d0901a585fff7ea51c",
+    "url": "/Wurtz/static/js/main.e23b79b2.chunk.js"
   },
   {
     "revision": "7116c48454f5d49c68d9",
