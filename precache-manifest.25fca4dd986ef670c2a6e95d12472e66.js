@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e54b82f60405ddd7992225f47a3969a",
+    "revision": "26f3fc2ce3b06a6a78274471f2081827",
     "url": "/Wurtz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wurtz/static/css/2.9b05d464.chunk.css"
   },
   {
-    "revision": "41d0901a585fff7ea51c",
+    "revision": "6cbf4673c96ff16effd2",
     "url": "/Wurtz/static/css/main.71274d24.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Wurtz/static/js/2.41954a73.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "41d0901a585fff7ea51c",
-    "url": "/Wurtz/static/js/main.e23b79b2.chunk.js"
+    "revision": "6cbf4673c96ff16effd2",
+    "url": "/Wurtz/static/js/main.7cb36ce3.chunk.js"
   },
   {
     "revision": "7116c48454f5d49c68d9",
