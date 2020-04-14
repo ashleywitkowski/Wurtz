@@ -197,7 +197,6 @@ class About extends Component {
               </span>
             </div>
           </div>
-
           <div
             className="vidGear"
             style={{
@@ -236,7 +235,7 @@ class About extends Component {
                   Lenses
                 </u>
                 <ul style={{ paddingLeft: "1%" }}>
-                  <li>Canon EFS 55-250mm​</li>
+                  <li>Canon EFS 55-250mm</li>
                   <li>Canon EFS 18-55mm</li>
                   <li>Canon EF 75-300</li>
                   <li>Canon Macro Lens EF 50mm</li>

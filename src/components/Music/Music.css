@@ -5,7 +5,6 @@
   font-size: 90px;
   color: rgb(58, 121, 146);
 }
-
 .row {
   display: flex;
 }
@@ -68,3 +67,4 @@
     visibility: hidden;
   }
 }
+

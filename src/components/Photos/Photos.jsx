@@ -68,6 +68,7 @@ class Photos extends Component {
                   color: "white",
                   cursor: "pointer",
                 }}
+            >
                 onClick={() =>
                   this.handleClick(
                     this.mod(

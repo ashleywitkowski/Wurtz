@@ -11,7 +11,6 @@ class Reel extends Component {
       activeIndex: 0,
     };
   }
-
   componentDidMount() {
     axios
       .get(
