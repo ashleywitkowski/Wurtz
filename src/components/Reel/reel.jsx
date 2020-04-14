@@ -8,28 +8,27 @@ class Reel extends Component {
     this.state = {
       channelId: "UCEs67m3EYo7Pw_16IokFrtg",
       videoIds: [], //"vidId1, vidId2"
-      activeIndex: 0
+      activeIndex: 0,
     };
   }
-
   componentDidMount() {
     axios
       .get(
         "https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUEs67m3EYo7Pw_16IokFrtg&key=AIzaSyAhNiyFdJIutZMTkYpC82cxYm6p8YDMHtc&part=snippet&maxResults=5"
       )
-      .then(res => {
+      .then((res) => {
         let vidIds = [];
 
         for (let i = 0; i < res.data.items.length; i++) {
           vidIds.push(res.data.items[i].snippet.resourceId.videoId);
         }
         this.setState({
-          videoIds: vidIds
+          videoIds: vidIds,
         });
       });
   }
 
-  renderVidThumbnail = vidIds => {
+  renderVidThumbnail = (vidIds) => {
     let vidThumbnails = [];
     var colSize = Math.round(12 / vidIds.length);
     for (let i = 0; i < vidIds.length; i++) {
@@ -47,7 +46,7 @@ class Reel extends Component {
     return vidThumbnails;
   };
 
-  handleClick = index => {
+  handleClick = (index) => {
     this.setState({ activeIndex: index });
   };
 
@@ -72,16 +71,20 @@ class Reel extends Component {
     ) : (
       <div className="row">
         <div className="col-lg-2"></div>
-        <div className="col-lg-10">
+        <div className="col-lg-10" style={{ textAlign: "center" }}>
           <div className="gridRow">
             <div
               style={{
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <span
-                style={{ justifyContent: "flex-start", color: "white" }}
+                style={{
+                  justifyContent: "flex-start",
+                  color: "white",
+                  cursor: "pointer",
+                }}
                 onClick={() =>
                   this.handleClick(
                     this.mod(
@@ -104,11 +107,15 @@ class Reel extends Component {
               className="chevronRight"
               style={{
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <span
-                style={{ justifyContent: "flex-start", color: "white" }}
+                style={{
+                  justifyContent: "flex-start",
+                  color: "white",
+                  cursor: "pointer",
+                }}
                 onClick={() =>
                   this.handleClick(
                     (this.state.activeIndex + 1) % this.state.videoIds.length
@@ -122,7 +129,7 @@ class Reel extends Component {
           <div
             className="row"
             style={{
-              justifyContent: "left"
+              justifyContent: "left",
             }}
           >
             {this.renderVidThumbnail(this.state.videoIds)}

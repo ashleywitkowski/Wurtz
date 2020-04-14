@@ -6,17 +6,17 @@ class About extends Component {
     super(props);
     this.state = {
       videoGear: "none",
-      audioGear: "none"
+      audioGear: "none",
     };
   }
   updateVideoGear = () => {
     this.setState({
-      videoGear: this.state.videoGear === "block" ? "none" : "block"
+      videoGear: this.state.videoGear === "block" ? "none" : "block",
     });
   };
   updateAudioGear = () => {
     this.setState({
-      audioGear: this.state.audioGear === "block" ? "none" : "block"
+      audioGear: this.state.audioGear === "block" ? "none" : "block",
     });
   };
 
@@ -24,26 +24,26 @@ class About extends Component {
     return (
       <div className="row">
         <div
-          className="col-lg-5"
+          className="col-md-5"
           style={{
-            marginRight: "35px"
+            marginRight: "5%",
           }}
         >
-          <div className="row">
+          <div className="row" style={{ justifyContent: "center" }}>
             <div className="jwIcon">
               <h1 id="jwHeader">Justin Wurtz</h1>
             </div>
           </div>
-          <div className="row">
+          <div className="row" style={{ justifyContent: "center" }}>
             <img
               id="jwImg"
               src={require("../../resources/Pictures/jwPhoto.jpg")}
-              width="70%"
+              width="73%"
               height="60%"
               alt="Justin"
             ></img>
           </div>
-          <div className="row">
+          <div className="row" style={{ justifyContent: "center" }}>
             <p id="pgraph">
               Graduate of New England Institute of Technology with a Bachelor’s
               Degree in Digital Media Production. Experience working as a
@@ -55,7 +55,7 @@ class About extends Component {
             </p>
           </div>
         </div>
-        <div className="col-lg-6" style={{ marginLeft: "35px" }}>
+        <div className="col-md-6" style={{ marginLeft: "2%" }}>
           <div className="row">
             <h1 id="audio">Audio</h1>
           </div>
@@ -69,41 +69,47 @@ class About extends Component {
             </p>
           </div>
           <div className="row">
+            {/* <div className="col-sm-2"> */}
             <h1 id="audioGear">Gear</h1>
-            <span
-              onClick={this.updateAudioGear}
-              style={{
-                color: "white",
-                transform: `rotate(${
-                  this.state.audioGear === "block" ? "90" : "0"
-                }deg)`,
-                height: "30px",
-                marginTop: "5px",
-                marginLeft: "10px"
-              }}
-            >
-              <i className={`fa fa-chevron-right`} />
-            </span>
+            {/* </div> */}
+            <div className="col-sm-1">
+              <span
+                onClick={this.updateAudioGear}
+                style={{
+                  color: "white",
+                  transform: `rotate(${
+                    this.state.audioGear === "block" ? "90" : "0"
+                  }deg)`,
+                  marginTop: "13%",
+                  float: "left",
+                  padding: 0,
+                  cursor: "pointer",
+                }}
+              >
+                <i className={`fa fa-chevron-right`} />
+              </span>
+            </div>
           </div>
+
           <div
             className="audGear"
             style={{
               display: this.state.audioGear,
               fontFamily: "BroadwayFlat",
               color: "white",
-              fontSize: "16px"
+              fontSize: "105%",
             }}
           >
             <div className="row">
               <div className="col-lg-4">
                 <u
                   style={{
-                    fontSize: "20px"
+                    fontSize: "110%",
                   }}
                 >
                   Microphones
                 </u>
-                <ul style={{ paddingLeft: "12px" }}>
+                <ul style={{ paddingLeft: "1%" }}>
                   <li>SM57 x2</li>
                   <li>Shure Beta 52a</li>
                   <li>Rhode M5 Matched Pair</li>
@@ -115,14 +121,14 @@ class About extends Component {
               <div className="col-lg-4">
                 <u
                   style={{
-                    fontSize: "20px"
+                    fontSize: "110%",
                   }}
                 >
                   Hardware
                 </u>
                 <ul
                   style={{
-                    paddingLeft: "12px"
+                    paddingLeft: "1%",
                   }}
                 >
                   <li>Focusrite Scarlett 18i8</li>
@@ -139,12 +145,12 @@ class About extends Component {
               <div className="col-lg-4">
                 <u
                   style={{
-                    fontSize: "20px"
+                    fontSize: "110%",
                   }}
                 >
                   Software
                 </u>
-                <ul style={{ paddingLeft: "12px" }}>
+                <ul style={{ paddingLeft: "1%" }}>
                   <li>Pro Tools</li>
                   <li>Logic Pro X</li>
                   <li>Native Instruments Komplete 11</li>
@@ -170,43 +176,47 @@ class About extends Component {
           </div>
 
           <div className="row">
+            {/* <div className="col-sm-2"> */}
             <h1 id="videoGear">Gear</h1>
-            <span
-              onClick={this.updateVideoGear}
-              style={{
-                color: "white",
-                transform: `rotate(${
-                  this.state.videoGear === "block" ? "90" : "0"
-                }deg)`,
-                marginBottom: "40px",
-                marginTop: "5px",
-                height: "30px"
-              }}
-            >
-              <i className={`fa fa-chevron-right`} />
-            </span>
+            {/* </div> */}
+            <div className="col-sm-1">
+              <span
+                onClick={this.updateVideoGear}
+                style={{
+                  color: "white",
+                  transform: `rotate(${
+                    this.state.videoGear === "block" ? "90" : "0"
+                  }deg)`,
+                  marginTop: "13%",
+                  float: "left",
+                  padding: 0,
+                  cursor: "pointer",
+                }}
+              >
+                <i className={`fa fa-chevron-right`} />
+              </span>
+            </div>
           </div>
-          {/* <div className="row"> */}
           <div
             className="vidGear"
             style={{
               display: this.state.videoGear,
               fontFamily: "BroadwayFlat",
               color: "white",
-              fontSize: "16px"
+              fontSize: "105%",
             }}
           >
             <div className="row">
               <div className="col-lg-8">
                 <u
                   style={{
-                    fontSize: "20px",
-                    paddingLeft: "12px"
+                    fontSize: "110%",
+                    paddingLeft: "1%",
                   }}
                 >
                   Camera
                 </u>
-                <ul style={{ paddingLeft: "12px" }}>
+                <ul style={{ paddingLeft: "1%" }}>
                   <li>Lumix G85</li>
                   <li>Canon EOS 70D</li>
                   <li>Yelangu Gimbal</li>
@@ -219,13 +229,13 @@ class About extends Component {
               <div className="col-lg-8">
                 <u
                   style={{
-                    fontSize: "20px"
+                    fontSize: "110%",
                   }}
                 >
                   Lenses
                 </u>
-                <ul style={{ paddingLeft: "12px" }}>
-                  <li>Canon EFS 55-250mm​</li>
+                <ul style={{ paddingLeft: "1%" }}>
+                  <li>Canon EFS 55-250mm</li>
                   <li>Canon EFS 18-55mm</li>
                   <li>Canon EF 75-300</li>
                   <li>Canon Macro Lens EF 50mm</li>

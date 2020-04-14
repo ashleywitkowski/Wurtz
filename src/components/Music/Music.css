@@ -5,19 +5,20 @@
   font-size: 90px;
   color: rgb(58, 121, 146);
 }
-
-.musicRow {
+.row {
   display: flex;
 }
-
+/* 
 #divider {
-  position: flex;
-  margin-left: 120px;
-  margin-right: 50px;
-  top: 10%;
-  bottom: 15%;
-  border-left: 3px solid white;
-}
+  /* position: flex;
+  /* margin-left: 14%; 
+  margin-right: 10%;
+  margin-top: 4%;
+  /* top: 8%; 
+  /* bottom: 18%; 
+  height: 360px;
+  border-left: 5px dotted white;
+} */
 
 .record {
   background: linear-gradient(
@@ -45,7 +46,7 @@
 }
 
 .albumCover:hover + .record {
-  margin-left: 415px !important;
+  margin-left: 430px !important;
   transition-timing-function: ease-in;
   transition-duration: 2s;
 }
@@ -53,3 +54,17 @@
 .albumCover {
   z-index: 10;
 }
+
+@media only screen and (max-width: 480px) {
+  .record,
+  .record::after {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1257px) {
+  #divider {
+    visibility: hidden;
+  }
+}
+

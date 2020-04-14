@@ -37,3 +37,9 @@
   grid-column-start: 2;
   grid-column-end: 2;
 }
+
+@media only screen and (max-width: 400px) {
+  #carousel {
+    width: auto !important;
+  }
+}

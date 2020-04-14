@@ -10,13 +10,13 @@ class Photos extends Component {
       activeIndex: 0,
       images: this.importAll(
         require.context("../../resources/Gallery", false, /\.(png|jpe?g|svg)$/)
-      )
+      ),
     };
   }
 
-  importAll = r => {
+  importAll = (r) => {
     let images = {};
-    r.keys().forEach(item => {
+    r.keys().forEach((item) => {
       images[item.replace("./", "")] = r(item);
     });
     return images;
@@ -47,7 +47,7 @@ class Photos extends Component {
     return ((index % length) + length) % length;
   }
 
-  handleClick = index => {
+  handleClick = (index) => {
     this.setState({ activeIndex: index });
   };
   render() {
@@ -59,11 +59,16 @@ class Photos extends Component {
               className="chevronLeft"
               style={{
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <span
-                style={{ justifyContent: "flex-start", color: "white" }}
+                style={{
+                  justifyContent: "flex-start",
+                  color: "white",
+                  cursor: "pointer",
+                }}
+            >
                 onClick={() =>
                   this.handleClick(
                     this.mod(
@@ -80,7 +85,7 @@ class Photos extends Component {
               activeIndex={this.state.activeIndex}
               controls={false}
               interval={7000}
-              onSelect={e => this.setState({ activeIndex: e })}
+              onSelect={(e) => this.setState({ activeIndex: e })}
               className="carousel-inner"
             >
               {this.renderImgs(this.images)}
@@ -89,11 +94,15 @@ class Photos extends Component {
               className="chevronRight"
               style={{
                 display: "flex",
-                alignItems: "center"
+                alignItems: "center",
               }}
             >
               <span
-                style={{ justifyContent: "flex-start", color: "white" }}
+                style={{
+                  justifyContent: "flex-start",
+                  color: "white",
+                  cursor: "pointer",
+                }}
                 onClick={() =>
                   this.handleClick(
                     this.mod(
